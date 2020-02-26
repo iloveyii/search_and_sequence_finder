@@ -49,3 +49,5 @@ function findRecordsWith(records, bpDiff, ageStart, ageEnd) {
 }
 
 getAllData().then(r => findRecordsWith(r, 20, 28, 30))
+
+// Run as node index.js
