@@ -20,5 +20,3 @@ This is a node and PHP test.
      1. node >= 10.16.0
      2. npm >= 6.9.0
      3. PHP 7
-     4. Apache 2 or Nginx Web server
-     5. MySQL >= 5.7
