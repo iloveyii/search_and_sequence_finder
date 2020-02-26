@@ -1,6 +1,6 @@
 const axios = require('axios')
 const url = 'https://jsonmock.hackerrank.com/api/medical_records?page=';
-const DEBUG = false;
+const DEBUG = true;
 
 
 // Get all data - from all pages
@@ -45,9 +45,13 @@ function findRecordsWith(records, bpDiff, ageStart, ageEnd) {
             }
         }
     });
-    console.log('Found: ', JSON.stringify(searched))
+    if(DEBUG) {
+        console.log('Found: ', JSON.stringify(searched))
+    } else {
+        return searched;
+    }
 }
 
-getAllData().then(r => findRecordsWith(r, 20, 28, 30))
+getAllData().then(r => findRecordsWith(r, 63, 28, 30))
 
 // Run as node index.js
